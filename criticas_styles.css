@@ -1,0 +1,353 @@
+
+html { 
+    background: url(images/bgimage.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+body.a{
+    background: url(images/bgimage.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+
+.navMenu {
+  position: absolute;
+  top: 8%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.navMenu a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.5em;
+  font-weight: 500;
+  display: inline-block;
+  width: 100px;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:hover {
+  color: #fddb3a;
+}
+
+.navMenu .dot {
+  width: 6px;
+  height: 6px;
+  background: #fddb3a;
+  border-radius: 50%;
+  opacity: 0;
+  -webkit-transform: translateX(30px);
+  transform: translateX(30px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
+
+.navMenu a:nth-child(1):hover ~ .dot {
+  -webkit-transform: translateX(30px);
+  transform: translateX(25px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(2):hover ~ .dot {
+  -webkit-transform: translateX(130px);
+  transform: translateX(140px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(3):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(240px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(4):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(350px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+.navMenu a:nth-child(5):hover ~ .dot {
+  -webkit-transform: translateX(200px);
+  transform: translateX(450px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+.navMenu a:nth-child(6):hover ~ .dot {
+  -webkit-transform: translateX(285px);
+  transform: translateX(550px);
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+  opacity: 1;
+}
+
+
+#wrapper {
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  font-size: 7em;
+  padding: 50px 0;
+  position: relative;
+  top: 100px;
+}
+
+span { 
+  text-shadow: -0.06em 0 #82AFA1,  0.06em 0 #49322D; 
+  letter-spacing: 0.08em; 
+}
+
+p {
+  margin: 0;
+}
+
+
+
+#stars span {
+  display: inline-block;
+  transform: scale(1);
+  transition: transform 2s cubic-bezier(0, 1, 0, 1);
+}
+#stars span:hover {
+  cursor: crosshair;
+  transform: scale(1.3); 
+  transition: transform .2s cubic-bezier(0, 0.75, 0, 1);
+}
+#stars span:active {
+  text-shadow: none; 
+}
+
+
+#stars span:nth-child(1), #stars span:nth-child(5) { font-size: 0.5em; animation-delay: 0.2s; }
+#stars span:nth-child(2), #stars span:nth-child(4) { font-size: 0.8em; animation-delay: 0.1s; }
+#stars span:nth-child(3) { font-size: 1.1em; animation-delay: 0s; }
+
+#stars span { animation: stars-animation 3s 50 ease-in-out; }
+
+@-webkit-keyframes stars-animation {
+  0% { transform: scale(1); }
+  90% { transform: scale(1); }
+  95% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+#stars:hover span {
+  animation: none;
+}
+
+
+
+
+#title {
+  font-family: Helvetica, Geneva, sans-serif; 
+}
+#title:focus {
+  outline: none;
+}
+#title span {
+  vertical-align: middle;
+  line-height: 1.5em;
+  transition: font-size 2s cubic-bezier(0, 1, 0, 1);
+}
+#title span:hover {
+  font-size: 1.5em;
+  line-height: 1em;
+  transition: font-size .2s cubic-bezier(0, 0.75, 0, 1);
+}
+#title span:active {
+  font-size: 1em;
+  text-shadow: none; 
+}
+#title span::selection {
+  background-color: red; 
+}
+
+
+
+
+#slogan { font-size: 0.25em; }
+#slogan span:active { text-shadow: none; }
+
+
+
+
+
+
+#meta {
+  color: #777;
+  font-size: 2.0em;
+  line-height: 1.6em;
+  text-align: center;
+  text-shadow: rgba(255,255,255,0.5) 0 1px 0;
+  margin: 30px;
+}
+#meta strong { font-weight: bold; color: #000; }
+#meta p:first-child { margin-bottom: 20px; }
+#meta a { text-decoration: none; color: #7276ff; }
+#meta a:hover { color: rgba(114,118,255,0.5); }
+#meta img { vertical-align: text-bottom; }
+.tuclase {
+text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; font-size: 30px; 
+background: #202020; 
+-webkit-background-clip: text; 
+-moz-background-clip: text; 
+background-clip: text; 
+color: transparent; 
+text-shadow: 0px 3px 3px rgba(255,255,255,0.4),0px -1px 1px rgba(0,0,0,0.3);
+}
+
+.sombreado {
+text-align: left; 
+font-family: Arial Black; 
+font-weight: bold; 
+font-size: 12px; 
+color: #fff; 
+text-shadow: 0 1px 0 #ddd, 0 2px 0 #ccc, 0 3px 0 #bbb, 0 4px 0 #aaa, 0 5px 0 #acacac, 0 6px 1px rgba(0,0,0,0.1), 0 0 5px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.3), 0 3px 5px rgba(0,0,0,0.2), 0 5px 10px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.2), 0 20px 20px rgba(0,0,0,0.15);
+}
+
+
+<style>
+    .PanelFloat {
+        position: fixed;
+        overflow: hidden;
+        z-index: 2400;
+        opacity: 0.70;
+        right: 30px;
+        top: 0px !important;
+        -webkit-transition: all 0.5s ease-in-out;
+        -moz-transition: all 0.5s ease-in-out;
+        -ms-transition: all 0.5s ease-in-out;
+        -o-transition: all 0.5s ease-in-out;
+        transition: all 0.5s ease-in-out;
+    }
+</style>
+
+<script>
+ //The below script will keep the panel float on normal state
+ $(function () {
+        $(document).on('scroll', function () {
+            //Multiplication value shall be changed based on user window
+            $('#MyFloatPanel').css('top', 4 * ($(window).scrollTop() / 5));
+        });
+    });
+ //To make the panel float over a bootstrap model which has z-index: 2300, so i specified custom value as 2400
+ $(document).on('click', '.btnSearchView', function () {
+      $('#MyFloatPanel').addClass('PanelFloat');
+  });
+
+  $(document).on('click', '.btnSearchClose', function () {
+      $('#MyFloatPanel').removeClass('PanelFloat');
+  });
+ </script>
+
+ <div class="col-lg-12 col-md-12">
+   <div class="col-lg-8 col-md-8" >
+    //My scrollable content is here
+   </div>
+   //This below panel will float while scrolling the above div content
+   <div class="col-lg-4 col-md-4" id="MyFloatPanel">
+    <div class="row">
+     <div class="panel panel-default">
+      <div class="panel-heading">Panel Head </div>
+     <div class="panel-body ">//Your panel content</div>
+   </div>
+  </div>
+ </div>
+</div>
+
+*{
+  margin: 0;
+  padding: 0;
+  font-family: "montserrat",sans-serif;
+}
+
+
+.testimonials{
+  padding: 40px 0;
+  background: #f1f1f1;
+
+  text-align: center;
+}
+.inner{
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden;
+  padding: 0 20px;
+}
+
+.border{
+  width: 160px;
+  height: 5px;
+  background: #313231;
+  margin: 26px auto;
+}
+
+.row{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.col{
+  flex: 33.33%;
+  max-width: 33.33%;
+  box-sizing: border-box;
+  padding: 15px;
+}
+.testimonial{
+  background: #fff;
+  padding: 30px;
+}
+.testimonial img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.name{
+  font-size: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+}
+.stars{
+  color: #6ab04c;
+  margin-bottom: 20px;
+}
+
+
+@media screen and (max-width:960px) {
+.col{
+  flex: 100%;
+  max-width: 80%;
+}
+}
+
+@media screen and (max-width:600px) {
+.col{
+  flex: 100%;
+  max-width: 100%;
+}
+}
